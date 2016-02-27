@@ -25,15 +25,15 @@ def parse(filename):
 
         # When String ends
         # When \
-        if x == "\\":
+        if x[y] == "\\":
              # the next one needs to be special char
-            # if not retun syntaxError
+            # if not return syntaxError
             if x[y+1] != special char
                 return syntaxError
-
-            pass
+            y += 1
+            
         # end of String
-        if stack1.peek() == x == "\'" or "\"":
+        if stack1.peek() == x[y] == "\'" or "\"":
             stack1.pop()
         # Not during a String
         elif stack.peek() != "\'" and "\"":
