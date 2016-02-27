@@ -7,7 +7,7 @@ def parse(filename):
     stack1 = Stack()
     for x in filename:
         x += str(x)
-    for y in x
+    for y in range(len(x))
         # if x == \
         # if during a string
         # when " or ' the first special char should be " or '
@@ -24,9 +24,13 @@ def parse(filename):
 
 
         # When String ends
+        # When \
         if x == "\\":
-            # the next one needs to be special char
-            # if not return syntaxError
+             # the next one needs to be special char
+            # if not retun syntaxError
+            if x[y+1] != special char
+                return syntaxError
+
             pass
         # end of String
         if stack1.peek() == x == "\'" or "\"":
