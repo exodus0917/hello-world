@@ -1,0 +1,57 @@
+from numpy import *
+from Stack import *
+
+syntaxError = "syntax error"
+
+def parse(filename):
+    stack1 = Stack()
+    for x in filename:
+        x += str(x)
+    for y in x
+        # if x == \
+        # if during a string
+        # when " or ' the first special char should be " or '
+        #
+        # implementing
+        # when x is special char
+        #   check what special char
+        # when x is not special char
+        #   skip
+
+
+
+
+
+
+        # When String ends
+        if x == "\\":
+            # the next one needs to be special char
+            # if not return syntaxError
+            pass
+        # end of String
+        if stack1.peek() == x == "\'" or "\"":
+            stack1.pop()
+        # Not during a String
+        elif stack.peek() != "\'" and "\"":
+            specialChars = array(["{","[","(","}","]",")","\'","\""])
+            for sChar in specialChars:
+                # when x is not special char or \
+                if x != sChar or x == "\\":
+                    break
+                else:
+                    # when { [ (
+                    if x == "{" or "[" or "(":
+                        stack1.push(x)
+                    # when " ' but not when the top stack is " '
+                    elif stack1.peek() != x and x == "\"" or "\'":
+                        stack1.push(x)
+                    # when } ] )
+                    elif x == "}" or "]" or ")":
+                        if stack1.peek() != x:      #can we just shorten this by ???? if stack1.pop() != x ????
+                            return syntaxError
+                        stack1.pop()
+                     # when " ' and when the top stack is " '
+                    elif stack1.peek() == x == "\"" or "\'":
+                        if stack1.peek() != x:
+                            return syntaxError
+                        stack1.pop()
